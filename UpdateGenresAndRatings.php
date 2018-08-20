@@ -11,11 +11,11 @@ $connection = $dbclass->getConnection();
 $GenesValue=null;
 $Ratings=null;
 $id=null;
-if (isset($_POST['Genres'])) {
-  $GenesValue=$_POST['Genres'];
+if (isset($_POST['genres'])) {
+  $GenesValue=$_POST['genres'];
 }
-if (isset($_POST['Ratings'])) {
-  $Ratings=$_POST['Ratings'];
+if (isset($_POST['ratings'])) {
+  $Ratings=$_POST['ratings'];
 }
 if (isset($_POST['id'])) {
   $id=$_POST['id'];
