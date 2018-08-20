@@ -8,7 +8,7 @@ require 'config/dbclass.php';
 
 $dbclass = new DBClass();
 $connection = $dbclass->getConnection();
-$Year=$_GET['Year'];
+$Year=$_GET['year'];
 $query = "SELECT Movie_Id, Title, Released_Year, Rating, Genres FROM movie_data WHERE Released_Year='$Year'";
 $stmt = $connection->prepare($query);
 $stmt->execute();
