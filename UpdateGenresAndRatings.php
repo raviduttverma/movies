@@ -22,12 +22,12 @@ if (isset($_POST['id'])) {
 }
 
 if($GenesValue!=null && $Ratings!=null && $id!=null){
-  $query = "UPDATE movie_data SET Rating='$Ratings', Genres=$GenesValue WHERE Movie_Id=$id";
+  $query = "UPDATE movie_data SET Rating='$Ratings', Genres='$GenesValue' WHERE Movie_Id=$id";
   $stmt = $connection->prepare($query);
   $stmt->execute();
   echo "Genres and Ratings Updated";
 }else if($GenesValue!=null && $Ratings==null && $id!=null){
-  $query = "UPDATE movie_data SET Genres=$GenesValue WHERE Movie_Id=$id";
+  $query = "UPDATE movie_data SET Genres='$GenesValue' WHERE Movie_Id=$id";
   $stmt = $connection->prepare($query);
   $stmt->execute();
   echo "Genres Updated";
